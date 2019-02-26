@@ -15,12 +15,14 @@ public class DbUtil {
 
     // creating dbUtil object with hikari config
 
+    // write here your own username and password
+
     private DbUtil(){
         HikariConfig config = new HikariConfig();
         config.setJdbcUrl("jdbc:mysql://localhost:3306/world?useSSL=false&serverTimezone=UTC");
         config.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        config.setUsername("Mkocik");
-        config.setPassword("micro$p4c3S");
+        config.setUsername("{username}");
+        config.setPassword("{password}");
         dataSource =new HikariDataSource(config);
     }
 
